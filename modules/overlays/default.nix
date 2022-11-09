@@ -41,8 +41,4 @@ in
   mac-pkgs = final: prev:
     import ./macpkgs { pkgs = prev; inherit attrsets; };
 
-  # nodePackages = final: prev: {
-  #   nodePackages = prev.nodePackages // import ./pkgs/node-packages { pkgs = prev; };
-  # };
-
 }
