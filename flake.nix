@@ -1,5 +1,5 @@
 {
-  description = "ri7's nix darwin system";
+  description = "Aan's nix darwin system";
 
   inputs = {
     # Package sets
@@ -54,10 +54,10 @@
       homeManagerStateVersion = "22.05";
 
       primaryUserInfo = {
-        username = "r17";
-        fullName = "Rin";
-        email = "hi@rin.rocks";
-        nixConfigDirectory = "/Users/r17/.config/nixpkgs";
+        username = "petruknisme";
+        fullName = "Aan";
+        email = "me@petruknisme.com";
+        nixConfigDirectory = "/Users/petruknisme/.config/nixpkgs";
       };
 
       # Modules shared by most `nix-darwin` personal configurations.
@@ -91,7 +91,7 @@
       ];
     in
     {
-      # Current Macbook Pro M1 from Ruangguru.com
+      # Current Macbook Pro M1
       darwinConfigurations = rec {
         # TODO refactor darwin.nix to make common or bootstrap configuration
         bootstrap-x86 = makeOverridable darwinSystem {
@@ -101,28 +101,14 @@
 
         bootstrap-arm = bootstrap-x86.override { system = "aarch64-darwin"; };
 
-        RG = makeOverridable darwinSystem {
-          system = "aarch64-darwin";
+        Chernobyl = makeOverridable darwinSystem {
+          system = "x86_64-darwin";
+          #system = "aarch64-darwin";
           modules = nixDarwinCommonModules ++ [
             {
               users.primaryUser = primaryUserInfo;
-              networking.computerName = "RG";
-              networking.hostName = "RG";
-              networking.knownNetworkServices = [
-                "Wi-Fi"
-                "USB 10/100/1000 LAN"
-              ];
-            }
-          ];
-        };
-
-        eR17 = makeOverridable darwinSystem {
-          system = "aarch64-darwin";
-          modules = nixDarwinCommonModules ++ [
-            {
-              users.primaryUser = primaryUserInfo;
-              networking.computerName = "eR17";
-              networking.hostName = "eR17";
+              networking.computerName = "Chernobyl";
+              networking.hostName = "Chernobyl";
               networking.knownNetworkServices = [
                 "Wi-Fi"
                 "USB 10/100/1000 LAN"
@@ -140,14 +126,14 @@
 
       # `home-manager` modules
       homeManagerModules = {
-        r17-activation = import ./home/activation.nix;
-        r17-packages = import ./home/packages.nix;
-        r17-shell = import ./home/shells.nix;
-        r17-git = import ./home/git.nix;
-        r17-tmux = import ./home/tmux.nix;
-        r17-neovim = import ./home/neovim.nix;
-        r17-alacritty = import ./home/alacritty.nix;
-        r17-devshell = import ./home/devShell.nix;
+        ptr-activation = import ./home/activation.nix;
+        ptr-packages = import ./home/packages.nix;
+        ptr-shell = import ./home/shells.nix;
+        ptr-git = import ./home/git.nix;
+        ptr-tmux = import ./home/tmux.nix;
+        ptr-neovim = import ./home/neovim.nix;
+        ptr-alacritty = import ./home/alacritty.nix;
+        ptr-devshell = import ./home/devShell.nix;
 
         home-user-info = { lib, ... }: {
           options.home.user-info =
