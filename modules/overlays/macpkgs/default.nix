@@ -12,7 +12,6 @@ let
     "rectangle"
     "xbar"
     "obs-studio"
-    "telegram"
     "iriun-webcam"
     "clipy"
     # "googlechrome" # see system/darwin/homebrew.nix

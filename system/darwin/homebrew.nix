@@ -60,23 +60,7 @@ in
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
   # installed in `../home/default.nix` whenever possible.
   homebrew.brews = [
-    "scrcpy"
-    "apktool"
-    "ansible"
-    "asciinema"
-    "aria2"
-    "ffmpeg"
-    "gifsicle"
-    "ipython"
-    "jadx"
     "jenv"
-    "jupyterlab"
-    "packer"
-    "nuclei"
-    "nmap"
-    "neofetch"
-    "sqlmap"
-    "ffuf"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];

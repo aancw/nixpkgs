@@ -12,6 +12,8 @@
     iterm2
     dnscrypt-proxy2
     terminal-notifier
+    python310Packages.ipython
+    python310Packages.jupyterlab
   ];
 
   # something wrong

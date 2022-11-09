@@ -87,7 +87,10 @@
       ################################## 
       # Development
       ################################## 
-      nodePackages.vercel
+      ansible
+      git
+      rustup
+      neovim
       podman
       podman-compose
       qemu
@@ -102,6 +105,7 @@
       # gitlab-runner
       comby
       python3
+      ipython
       pkg-config
       mob
       # openvpn # currently not used
@@ -115,15 +119,30 @@
       ################################## 
       # Misc
       ################################## 
-      spotifyd # spotify daemon for TUI
-      spotify-tui # spotify terminal UI
       obs-studio
+      asciinema
+      aria
+      ffmpeg
+      gifsicle
+      packer
+
+      ################################## 
+      # Sec
+      ##################################
+      ffuf
+      jadx
+      sqlmap
+      gdb
+      exiftool
+      scrcpy
+      apktool
+      nuclei
+      nmap
 
       ################################## 
       # Communication
       ################################## 
-      discord-ptb
-      slack
+      discord
       (zoom-us.overrideAttrs
         (oldAttrs: rec
         {
