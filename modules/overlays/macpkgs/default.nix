@@ -14,6 +14,8 @@ let
     "obs-studio"
     "iriun-webcam"
     "clipy"
+    "openvpn-connect"
+    "adguard"
     # "googlechrome" # see system/darwin/homebrew.nix
   ];
 in

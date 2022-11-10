@@ -125,6 +125,7 @@
       ffmpeg
       gifsicle
       packer
+      wireshark
 
       ################################## 
       # Sec
@@ -143,6 +144,7 @@
       # Communication
       ################################## 
       discord
+      thunderbird
       (zoom-us.overrideAttrs
         (oldAttrs: rec
         {
