@@ -64,6 +64,7 @@ let
     gfa = "git fetch --all";
     grc = "git rebase --continue";
     rm = "rm -i";
+    lvim = "$HOME/.local/bin/lvim";
 
     # Development
     docker = "${pkgs.podman}/bin/podman";

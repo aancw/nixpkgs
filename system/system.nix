@@ -15,6 +15,7 @@
       ];
 
       substituters = [
+        "https://cache.komunix.org"
         "https://nix-community.cachix.org"
         # using cachix from r17
         "https://r17.cachix.org/"
@@ -54,7 +55,7 @@
     stateVersion = 4;
     # Keyboard
     keyboard.enableKeyMapping = true;
-    keyboard.remapCapsLockToEscape = true;
+    #keyboard.remapCapsLockToEscape = true;
     # Add ability to used TouchID for sudo authentication
   };
 }

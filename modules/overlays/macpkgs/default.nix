@@ -10,9 +10,9 @@
 let
   packages = [
     "rectangle"
-    "xbar"
+    #"xbar"
     "obs-studio"
-    "iriun-webcam"
+    #"iriun-webcam"
     "clipy"
     "openvpn-connect"
     "adguard"

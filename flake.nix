@@ -131,9 +131,9 @@
         ptr-shell = import ./home/shells.nix;
         ptr-git = import ./home/git.nix;
         ptr-tmux = import ./home/tmux.nix;
-        ptr-neovim = import ./home/neovim.nix;
+        #ptr-neovim = import ./home/neovim.nix;
         ptr-alacritty = import ./home/alacritty.nix;
-        ptr-devshell = import ./home/devShell.nix;
+        #ptr-devshell = import ./home/devShell.nix;
 
         home-user-info = { lib, ... }: {
           options.home.user-info =
@@ -155,7 +155,7 @@
         system-darwin-packages = import ./system/darwin/packages.nix;
         # system-darwin-security-pam = import ./system/darwin/security.nix;
         system-darwin-gpg = import ./system/darwin/gpg.nix;
-        system-darwin-window-manager = import ./system/darwin/wm.nix;
+        #system-darwin-window-manager = import ./system/darwin/wm.nix;
         system-darwin-homebrew = import ./system/darwin/homebrew.nix;
       };
     } // flake-utils.lib.eachDefaultSystem (system: {

@@ -43,18 +43,8 @@ in
   };
 
   homebrew.casks = [
-    "firefox"
-    "google-chrome"
-    "visual-studio-code"
     "blackhole-16ch"
-    "postman"
     "gpg-suite"
-    "adoptopenjdk11"
-    "adoptopenjdk13"
-    "meld"
-    "adoptopenjdk8"
-    "powershell-preview"
-    "vagrant"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be

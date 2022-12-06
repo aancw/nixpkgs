@@ -100,14 +100,22 @@
       gcc
       # yarn # currently defined in devShell.nix
       tokei
+      go
       # google-cloud-sdk
       # nodejs-16_x
       # gitlab-runner
       comby
-      python3
-      ipython
+      python310
       pkg-config
       mob
+      postman
+      vscode
+      meld
+      powershell
+      vagrant
+      #adoptopenjdk-bin
+      #adoptopenjdk-openj9-bin-8
+      #adoptopenjdk-openj9-bin-16
       # openvpn # currently not used
 
       ################################## 
@@ -144,17 +152,17 @@
       # Communication
       ################################## 
       discord
-      thunderbird
-      (zoom-us.overrideAttrs
-        (oldAttrs: rec
-        {
-          src = lib.optionals pkgs.stdenv.isDarwin fetchurl {
-            url = "https://zoom.us/client/${oldAttrs.version}/Zoom.pkg?archType=arm64";
-            sha256 = "sha256-btp7y/pmxr2qUrwhMEP2cqW5aTyy9GDPvkXaH/cYv5s=";
-          };
-        }
-        )
-      )
+      #thunderbird
+      # (zoom-us.overrideAttrs
+      #   (oldAttrs: rec
+      #   {
+      #     src = lib.optionals pkgs.stdenv.isDarwin fetchurl {
+      #       url = "https://zoom.us/client/${oldAttrs.version}/Zoom.pkg";
+      #       sha256 = "sha256-BNJz48Kx17l3n4EN8bW8WL8KvXdRCGoiChBjnx9AUDk=";
+      #     };
+      #   }
+      #   )
+      # )
       ################################## 
       # Useful Nix related tools
       ################################## 
@@ -170,13 +178,12 @@
       stdenv.isDarwin
       [
         mas
-        xbar
+        #xbar
         rectangle
         cocoapods
         m-cli # useful macOS CLI commands
         xcode-install
-        telegram
-        iriun-webcam
+        #iriun-webcam
         clipy
         # googlechrome
       ];
