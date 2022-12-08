@@ -46,17 +46,17 @@ in
   homebrew.casks = [
     "blackhole-16ch"
     "gpg-suite"
+    "openvpn-connect"
+    "spotify"
+    "macs-fan-control"
+    "github"
+    "steam"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
   # installed in `../home/default.nix` whenever possible.
   homebrew.brews = [
     "jenv"
-    "openvpn-connect"
-    "spotify"
-    "macs-fan-control"
-    "github"
-    "steam"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];
