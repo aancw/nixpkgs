@@ -31,11 +31,11 @@ let
     in
     rec {
       aarch64-darwin = {
-        url = "${base}/openvpn-connect-${version}.${r_number}_signed.dmg";
+        url = "${base}/openvpn-connect-${version}.${rNumber}_signed.dmg";
         sha256 = sha256;
       };
       x86_64-darwin = {
-        url = "${base}/openvpn-connect-${version}.${r_number}_signed.dmg";
+        url = "${base}/openvpn-connect-${version}.${rNumber}_signed.dmg";
         sha256 = sha256;
       };
     };
