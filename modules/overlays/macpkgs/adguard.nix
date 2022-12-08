@@ -22,7 +22,7 @@ let
   }.${system} or throwSystem;
 
   srcs =
-    let base = "https://download.adguard.com/d/18675/AdGuardInstaller.dmg?source=blog_annoyances_filter";
+    let base = "https://download.adguard.com/d/18675/AdGuardInstaller.dmg";
     in
     rec {
       aarch64-darwin = {
