@@ -43,7 +43,7 @@ let
   darwin = stdenv.mkDerivation {
     inherit pname version src meta;
 
-    nativeBuildInputs = [ undmg ];
+    nativeBuildInputs = [ unzip ];
 
     sourceRoot = "Macs Fan Control.app";
 

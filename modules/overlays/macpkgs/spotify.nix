@@ -43,12 +43,13 @@ let
   darwin = stdenv.mkDerivation {
     inherit pname version src meta;
 
-    nativeBuildInputs = [ undmg ];
+    nativeBuildInputs = [ unzip ];
 
     sourceRoot = "Install Spotify.app";
 
     installPhase = ''
       runHook preInstall
+      unzip 
       mkdir -p $out/Applications/Spotify.app
       cp -R . $out/Applications/Spotify.app
       runHook postInstall

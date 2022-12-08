@@ -56,7 +56,7 @@ let
   darwin = stdenv.mkDerivation {
     inherit pname version src meta;
 
-    nativeBuildInputs = [ undmg ];
+    nativeBuildInputs = [ unzip ];
 
     sourceRoot = "Github Desktop.app";
 
