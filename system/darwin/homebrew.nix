@@ -52,6 +52,8 @@ in
   # installed in `../home/default.nix` whenever possible.
   homebrew.brews = [
     "jenv"
+    "openvpn-connect"
+    "spotify"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];
