@@ -183,6 +183,7 @@
         xcode-install
         #iriun-webcam
         clipy
+        obsidian
         # googlechrome
       ];
 }
