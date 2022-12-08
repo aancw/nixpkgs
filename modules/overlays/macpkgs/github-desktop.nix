@@ -36,11 +36,11 @@ let
     in
     rec {
       aarch64-darwin = {
-        url = "${base}/${versionCommit}/GitHubDesktop-arm64.zip";
+        url = "${base}/${versionCommit}/GitHubDesktop-${cpu}.zip";
         sha256 = sha256;
       };
       x86_64-darwin = {
-        url = "${base}/${versionCommit}/GitHubDesktop-x64.zip";
+        url = "${base}/${versionCommit}/GitHubDesktop-${cpu}.zip";
         sha256 = sha256;
       };
     };
