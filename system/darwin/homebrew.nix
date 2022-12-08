@@ -55,6 +55,7 @@ in
     "openvpn-connect"
     "spotify"
     "macs-fan-control"
+    "github"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];

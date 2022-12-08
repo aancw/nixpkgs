@@ -58,12 +58,12 @@ let
 
     nativeBuildInputs = [ unzip ];
 
-    sourceRoot = "Github/\Desktop.app";
+    sourceRoot = "Github\/Desktop.app";
 
     installPhase = ''
       runHook preInstall
-      mkdir -p $out/Applications/Github/\Desktop.app
-      cp -R . $out/Applications/Github/\Desktop.app
+      mkdir -p $out/Applications/Github\/Desktop.app
+      cp -R . $out/Applications/Github\/Desktop.app
       runHook postInstall
     '';
   };
