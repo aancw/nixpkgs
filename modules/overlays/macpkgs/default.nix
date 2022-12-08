@@ -20,6 +20,7 @@ let
     "macs-fan-control"
     "obsidian"
     "spotify"
+    "steam"
     # "googlechrome" # see system/darwin/homebrew.nix
   ];
 in

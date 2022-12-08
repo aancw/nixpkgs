@@ -12,7 +12,7 @@ let
   pname = "obsidian";
 
   version = rec {
-    aarch64-darwin = "1.5.14";
+    aarch64-darwin = "1.0.3";
     x86_64-darwin = aarch64-darwin;
   }.${system} or throwSystem;
 

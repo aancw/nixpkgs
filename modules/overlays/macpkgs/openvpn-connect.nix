@@ -16,6 +16,11 @@ let
     x86_64-darwin = aarch64-darwin;
   }.${system} or throwSystem;
 
+  rNumber = rec {
+    aarch64-darwin = "4506";
+    x86_64-darwin = aarch64-darwin;
+  }.${system} or throwSystem;
+
   sha256 = rec {
     aarch64-darwin = "sha256-GsgQTrXQ3NnowEkPbD4wyPxWReZAtMPsMs9MLlBveJY=";
     x86_64-darwin = aarch64-darwin;
@@ -23,14 +28,16 @@ let
 
   srcs =
     let base = "https://swupdate.openvpn.net/downloads/connect";
-    let r_number = "4506";
     in
     rec {
       aarch64-darwin = {
         url = "${base}/openvpn-connect-${version}.${r_number}_signed.dmg";
         sha256 = sha256;
       };
-      x86_64-darwin = aarch64-darwin;
+      x86_64-darwin = {
+        url = "${base}/openvpn-connect-${version}.${r_number}_signed.dmg";
+        sha256 = sha256;
+      };
     };
 
   src = fetchurl (srcs.${system} or throwSystem);

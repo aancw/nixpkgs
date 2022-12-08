@@ -183,7 +183,13 @@
         xcode-install
         #iriun-webcam
         clipy
-        obsidian
+        # openvpn-connect
+        # adguard
+        # github-desktop
+        # macs-fan-control
+        # obsidian
+        spotify
+        steam
         # googlechrome
       ];
 }
