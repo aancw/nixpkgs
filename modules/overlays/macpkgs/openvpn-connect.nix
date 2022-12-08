@@ -1,7 +1,8 @@
 { lib
 , stdenv
 , fetchurl
-, undmg
+, libarchive
+, p7zip
 ,
 }:
 
