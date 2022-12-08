@@ -30,7 +30,7 @@ let
   };
 
   darwin = stdenv.mkDerivation {
-    inherit pname version src meta;
+    inherit pname src meta;
 
     nativeBuildInputs = [ undmg ];
 
