@@ -185,11 +185,11 @@
         clipy
         #openvpn-connect
         #adguard
-        github-desktop
+        #github-desktop
         #macs-fan-control
         obsidian
         #spotify
-        steam
+        #steam
         # googlechrome
       ];
 }

@@ -56,6 +56,7 @@ in
     "spotify"
     "macs-fan-control"
     "github"
+    "steam"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];
