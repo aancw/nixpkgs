@@ -54,6 +54,7 @@ in
     "jenv"
     "openvpn-connect"
     "spotify"
+    "macs-fan-control"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];

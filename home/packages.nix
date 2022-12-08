@@ -186,7 +186,7 @@
         #openvpn-connect
         #adguard
         github-desktop
-        macs-fan-control
+        #macs-fan-control
         obsidian
         #spotify
         steam
