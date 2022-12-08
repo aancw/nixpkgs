@@ -11,6 +11,11 @@ let
 
   pname = "steam";
 
+  version = rec {
+    aarch64-darwin = "1.0.0";
+    x86_64-darwin = aarch64-darwin;
+  }.${system} or throwSystem;
+
   srcs =
     let base = "https://cdn.akamai.steamstatic.com/client/installer/steam.dmg";
     in
@@ -30,7 +35,7 @@ let
   };
 
   darwin = stdenv.mkDerivation {
-    inherit pname src meta;
+    inherit pname version src meta;
 
     nativeBuildInputs = [ undmg ];
 
