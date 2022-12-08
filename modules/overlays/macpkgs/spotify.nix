@@ -1,7 +1,7 @@
 { lib
 , stdenv
 , fetchurl
-, undmg
+, unzip
 ,
 }:
 
@@ -49,7 +49,6 @@ let
 
     installPhase = ''
       runHook preInstall
-      unzip 
       mkdir -p $out/Applications/Spotify.app
       cp -R . $out/Applications/Spotify.app
       runHook postInstall
