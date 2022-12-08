@@ -184,7 +184,7 @@
         #iriun-webcam
         clipy
         openvpn-connect
-        adguard
+        #adguard
         github-desktop
         macs-fan-control
         obsidian
