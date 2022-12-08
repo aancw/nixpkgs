@@ -16,12 +16,18 @@ let
     x86_64-darwin = aarch64-darwin;
   }.${system} or throwSystem;
 
+  sha256 = rec {
+    aarch64-darwin = "sha256-X1VnDJGv02A6ihDYKhedqQdE/KmPAQZkeJHudA6oS6M=";
+    x86_64-darwin = aarch64-darwin;
+  }.${system} or throwSystem;
+
   srcs =
     let base = "https://cdn.akamai.steamstatic.com/client/installer/steam.dmg";
     in
     rec {
       aarch64-darwin = {
         url = "${base}";
+        sha256 = sha256;
       };
       x86_64-darwin = aarch64-darwin;
     };

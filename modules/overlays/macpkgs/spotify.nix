@@ -16,12 +16,18 @@ let
     x86_64-darwin = aarch64-darwin;
   }.${system} or throwSystem;
 
+  sha256 = rec {
+    aarch64-darwin = "sha256-HnjLgBjLzSRQNHqBLwHFljcJqEPveRTV8GDPc0RqoaY=";
+    x86_64-darwin = aarch64-darwin;
+  }.${system} or throwSystem;
+
   srcs =
     let base = "https://download.scdn.co/SpotifyInstaller.zip";
     in
     rec {
       aarch64-darwin = {
         url = "${base}";
+        sha256 = sha256;
       };
       x86_64-darwin = aarch64-darwin;
     };
