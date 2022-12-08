@@ -53,7 +53,10 @@ let
 
     nativeBuildInputs = [ undmg ];
 
-    sourceRoot = "OpenVPN Connect.app";
+    sourceRoot = {
+      aarch64-darwin = "OpenVPN_Connect_3_4_0(4506)_arm64_Installer_signed.pkg";
+      x86_64-darwin  = "OpenVPN_Connect_3_4_0(4506)_x86_64_Installer_signed.pkg";
+    }
 
     installPhase = ''
       runHook preInstall
