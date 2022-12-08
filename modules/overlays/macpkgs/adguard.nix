@@ -17,7 +17,7 @@ let
   }.${system} or throwSystem;
 
   sha256 = rec {
-    aarch64-darwin = "sha256-C2LMslwxLaQ2ZPuhJ8s8AeKGfpGkggAFIhVeFt7HgaI=";
+    aarch64-darwin = "sha256-tGv95fgisjbUyPaKdVYh8+fXrNcu6wDlR5qQI1kebrw=";
     x86_64-darwin = aarch64-darwin;
   }.${system} or throwSystem;
 
