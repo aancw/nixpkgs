@@ -26,8 +26,12 @@ let
     x86_64-darwin = "sha256-pzzBBsiY16+C3nopEfY/llnco8PCsm62erglmgleCtc=";
   }.${system} or throwSystem;
 
+  cpu = rec {
+    aarch64-darwin = "arm64";
+    x86_64-darwin = "x64";
+  }.${system} or throwSystem;
+
   srcs =
-    cpu = if (stdenv.hostPlatform.isAarch64) then "arm64" else "x64";
     let base = "https://desktop.githubusercontent.com/github-desktop/releases";
     in
     rec {
