@@ -59,11 +59,6 @@
       ################################## 
       # Platform specific
       ################################## 
-      asciinema # screen record
-      # glab # gitlab cli
-      # nodePackages.svg-term-cli
-      # nodePackages."@napi-rs/cli"
-      # nodePackages.mrm
 
       ################################## 
       # Manager
@@ -97,7 +92,9 @@
       babelfish
       paperkey
       shellcheck
-      gcc
+      #gcc
+      libxml2
+      libiconv # rust gcc
       # yarn # currently defined in devShell.nix
       tokei
       go
@@ -134,6 +131,7 @@
       gifsicle
       packer
       wireshark
+      audacity
 
       ################################## 
       # Sec

@@ -40,6 +40,7 @@ in
     "Enpass - Password Manager" = 732710998;
     Teams = 1543576480;
     NextDNS = 1464122853;
+    "Hidden Bar" =  1452453066;
   };
 
   homebrew.casks = [

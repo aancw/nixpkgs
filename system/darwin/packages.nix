@@ -14,6 +14,7 @@
     terminal-notifier
     python310Packages.ipython
     python310Packages.jupyterlab
+    python310Packages.lxml
   ];
 
   # something wrong

@@ -10,7 +10,7 @@
 
     variables = {
       SHELL = "${fish}/bin/fish";
-      CC = "${gcc}/bin/gcc";
+      #CC = "${gcc}/bin/gcc";
     };
   };
 

@@ -16,6 +16,10 @@ let
     "clipy"
     "openvpn-connect"
     "adguard"
+    "github-desktop"
+    "macs-fan-control"
+    "obsidian"
+    "spotify"
     # "googlechrome" # see system/darwin/homebrew.nix
   ];
 in
