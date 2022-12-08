@@ -45,7 +45,7 @@ let
 
     nativeBuildInputs = [ undmg ];
 
-    sourceRoot = "Install Spotify.app.app";
+    sourceRoot = "Install Spotify.app";
 
     installPhase = ''
       runHook preInstall
