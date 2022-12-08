@@ -51,17 +51,23 @@ let
   darwin = stdenv.mkDerivation {
     inherit pname version src meta;
 
-    nativeBuildInputs = [ undmg ];
-
     sourceRoot = rec {
       aarch64-darwin = "OpenVPN_Connect_3_4_0(4506)_arm64_Installer_signed.pkg";
       x86_64-darwin  = "OpenVPN_Connect_3_4_0(4506)_x86_64_Installer_signed.pkg";
     }.${system} or throwSystem;
 
+    dontBuild = true;
+    nativeBuildInputs = [ libarchive p7zip ];
+
+    unpackPhase = ''
+      7z x $src
+      bsdtar -xf Payload~
+    '';
+
     installPhase = ''
       runHook preInstall
-      mkdir -p $out/Applications/OpenVPN Connect.app
-      cp -R . $out/Applications/OpenVPN Connect.app
+      mkdir -p $out/bin
+      install -Dm755 usr/local/bin/mysides -t $out/bin
       runHook postInstall
     '';
   };
