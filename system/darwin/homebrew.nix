@@ -18,8 +18,13 @@ in
 
 
   homebrew.enable = true;
+  homebrew.global.autoUpdate = true;
   homebrew.onActivation.cleanup = "zap";
   homebrew.global.brewfile = true;
+   homebrew.caskArgs = {
+     # force = true;
+     verbose = true;
+   }
 
   homebrew.taps = [
     "homebrew/cask"
@@ -51,6 +56,20 @@ in
     "macs-fan-control"
     "github"
     "steam"
+    "cloudflare-warp"
+    "whatsapp"
+    "teamviewer"
+    "adguard"
+    "shottr"
+    "tor-browser"
+
+    # only activate when using fresh machine, it will replace the system 
+    # "obsidian"
+    # "burp-suite"
+    # "firefox"
+    # "thunderbird"
+    # "google-drive"
+    # "jetbrains-toolbox"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
