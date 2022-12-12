@@ -21,10 +21,10 @@ in
   homebrew.global.autoUpdate = true;
   homebrew.onActivation.cleanup = "zap";
   homebrew.global.brewfile = true;
-   homebrew.caskArgs = {
+   #homebrew.caskArgs = {
      # force = true;
-     verbose = true;
-   }
+     #verbose = true;
+   #};
 
   homebrew.taps = [
     "homebrew/cask"

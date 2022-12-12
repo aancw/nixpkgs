@@ -133,7 +133,7 @@
         ptr-tmux = import ./home/tmux.nix;
         #ptr-neovim = import ./home/neovim.nix;
         ptr-alacritty = import ./home/alacritty.nix;
-        #ptr-devshell = import ./home/devShell.nix;
+        ptr-devshell = import ./home/devShell.nix;
 
         home-user-info = { lib, ... }: {
           options.home.user-info =
