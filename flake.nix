@@ -1,5 +1,5 @@
 {
-  description = "ri7's nix darwin system";
+  description = "Aan's nix darwin system";
 
   inputs = {
     # Package sets
@@ -26,8 +26,8 @@
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     # Android Development
-    android-nixpkgs.url = "github:tadfisher/android-nixpkgs";
-    android-nixpkgs.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    #android-nixpkgs.url = "github:tadfisher/android-nixpkgs";
+    #android-nixpkgs.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
     # utilities
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
@@ -38,8 +38,8 @@
     neorg-overlay.inputs.flake-utils.follows = "flake-utils";
 
     # dvt
-    dvt.url = "github:efishery/dvt";
-    dvt.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    #dvt.url = "github:efishery/dvt";
+    #dvt.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs =
@@ -71,9 +71,9 @@
       homeManagerStateVersion = "23.05";
 
       primaryUserInfo = rec {
-        username = "r17";
-        fullName = "Rin";
-        email = "hi@rin.rocks";
+        username = "petruknisme";
+        fullName = "Aan";
+        email = "me@petruknisme.com";
         nixConfigDirectory = "/Users/${username}/.config/nixpkgs";
         within.neovim.enable = true;
       };
@@ -254,7 +254,7 @@
 
 
       # Modules --------------------------------------------------------------------------------{{{
-      # Current Macbook Pro M1 from Ruangguru.com
+      # Current Macbook Pro M1
       darwinConfigurations = rec {
         # TODO refactor darwin.nix to make common or bootstrap configuration
         bootstrap-x86 = makeOverridable darwinSystem {
@@ -264,26 +264,12 @@
 
         bootstrap-arm = bootstrap-x86.override { system = "aarch64-darwin"; };
 
-        RG = bootstrap-arm.override {
+        Chernobyl = bootstrap-arm.override {
           modules = nixDarwinCommonModules ++ [
             {
               users.primaryUser = primaryUserInfo;
-              networking.computerName = "RG";
-              networking.hostName = "RG";
-              networking.knownNetworkServices = [
-                "Wi-Fi"
-                "USB 10/100/1000 LAN"
-              ];
-            }
-          ];
-        };
-
-        eR17 = RG.override {
-          modules = nixDarwinCommonModules ++ [
-            {
-              users.primaryUser = primaryUserInfo;
-              networking.computerName = "eR17";
-              networking.hostName = "eR17";
+              networking.computerName = "Chernobyl";
+              networking.hostName = "Chernobyl";
               networking.knownNetworkServices = [
                 "Wi-Fi"
                 "USB 10/100/1000 LAN"
@@ -294,7 +280,7 @@
         };
       };
 
-      homeConfigurations.r17 =
+      homeConfigurations.ptr =
         let
           pkgs = import inputs.nixpkgs-unstable (defaultNixpkgs // { system = "x86_64-linux"; });
         in
@@ -311,13 +297,13 @@
 
       # `home-manager` modules
       homeManagerModules = {
-        r17-activation = import ./home/activation.nix;
-        r17-packages = import ./home/packages.nix;
-        r17-shell = import ./home/shells.nix;
-        r17-git = import ./home/git.nix;
-        r17-tmux = import ./home/tmux.nix;
-        r17-neovim = import ./home/neovim.nix;
-        r17-alacritty = import ./home/alacritty.nix;
+        ptr-activation = import ./home/activation.nix;
+        ptr-packages = import ./home/packages.nix;
+        ptr-shell = import ./home/shells.nix;
+        ptr-git = import ./home/git.nix;
+        ptr-tmux = import ./home/tmux.nix;
+        ptr-neovim = import ./home/neovim.nix;
+        ptr-alacritty = import ./home/alacritty.nix;
         # this module disabled, because shell environment
         # defined is evaluated first & it takes more spaces
         # in /nix/store
@@ -388,7 +374,7 @@
 
           # `nix develop my`.
           default = pkgs.mkShell {
-            name = "r17x_devshells_default";
+            name = "ptr_devshells_default";
             shellHook = '''' + checks.pre-commit-check.shellHook;
             buildInputs = checks.pre-commit-check.buildInputs or [ ];
             packages = checks.pre-commit-check.packages or [ ];

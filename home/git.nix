@@ -1,20 +1,10 @@
 { ... }:
 
 let
-  work = {
-    name = "R Adysurya Agus";
-    email = "adysurya@ruangguru.com";
-    signingKey = "F7B293AE6EAB33EE";
-  };
-  evil = {
-    name = "r17x";
-    email = "ri7nz@evilfactory.id";
-    signingKey = "5CA1E57AFBF76F90";
-  };
-  w1 = {
-    name = "r17x";
-    email = "ri7nz@evilfactory.id";
-    signingKey = "5CA1E57AFBF76F90";
+  personal = {
+    name = "Aan";
+    email = "me@petruknisme.com";
+    signingKey = "6EAB0E2374156E98";
   };
 in
 {
@@ -52,44 +42,21 @@ in
     difftool.prompt = false;
     merge.tool = "vimdiff";
     url = {
-      "git@gitlab.com:" = {
-        insteadOf = "https://gitlab.com/";
-      };
-      "git@bitbucket.org:" = {
-        insteadOf = "https://bitbucket.org/";
+      "git@gitlab.com" = {
+        insteadOf = "https://gitlab.com";
       };
     };
   };
 
   programs.git.includes = [
     {
-      condition = "gitdir:~/w0/";
-      contents.user = work;
-    }
-
-    {
-      condition = "gitdir:~/w1/";
-      contents.user = w1;
-    }
-
-    {
-      condition = "gitdir:~/go/";
-      contents.user = w1;
-    }
-
-    {
-      condition = "gitdir:~/evl/";
-      contents.user = evil;
-    }
-
-    {
-      condition = "gitdir:~/.local/share/";
-      contents.user = evil;
+      condition = "gitdir:~/Documents/GitHub";
+      contents.user = personal;
     }
 
     {
       condition = "gitdir:~/.config/nixpkgs/";
-      contents.user = evil;
+      contents.user = personal;
     }
   ];
 

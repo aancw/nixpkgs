@@ -12,7 +12,7 @@
 
       trusted-users = [
         "@admin"
-        "r17"
+        "petruknisme"
       ];
 
       substituters = [
@@ -20,6 +20,7 @@
         "https://nix-community.cachix.org"
         # using cachix from r17
         "https://r17.cachix.org/"
+        "https://petruknisme.cachix.org/"
       ];
 
 
@@ -27,6 +28,7 @@
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         # using cachix from r17
         "r17.cachix.org-1:vz0nG6BCbdgTPn7SEiOwe/3QwvjH1sb/VV9WLcBtkAY="
+        "petruknisme.cachix.org-1:hD6UdX6x1vC+F0Q073pTV24aX4Anx6rCSxe3VfHwVxo="
       ];
     };
 
@@ -54,7 +56,7 @@
     stateVersion = 4;
     # Keyboard
     keyboard.enableKeyMapping = true;
-    keyboard.remapCapsLockToEscape = true;
+    #keyboard.remapCapsLockToEscape = true;
     # Add ability to used TouchID for sudo authentication
   };
 }

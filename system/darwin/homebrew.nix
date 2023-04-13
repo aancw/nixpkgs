@@ -18,19 +18,65 @@ in
 
 
   homebrew.enable = true;
+  homebrew.global.autoUpdate = true;
   homebrew.onActivation.cleanup = "zap";
   homebrew.global.brewfile = true;
+   #homebrew.caskArgs = {
+     # force = true;
+     #verbose = true;
+   #};
+
+  homebrew.taps = [
+    "homebrew/cask"
+    "homebrew/cask-drivers"
+    "homebrew/cask-fonts"
+    "homebrew/cask-versions"
+    "homebrew/core"
+    "homebrew/services"
+    "nrlquaker/createzap"
+  ];
 
   homebrew.masApps = {
     Vimari = 1480933944;
     WhatsApp = 1147396723;
-    "SpeakerAmp:Booster & Equalizer" = 1496955576;
+    "Tailscale" = 1475387142;
+    "Microsoft Remote Desktop" = 1295203466;
+    Telegram = 747648890;
+    "Foxit PDF Reader" = 1032155965;
+    "Enpass - Password Manager" = 732710998;
+    Teams = 1543576480;
+    NextDNS = 1464122853;
+    "Hidden Bar" =  1452453066;
   };
 
   homebrew.casks = [
-    "firefox"
-    "google-chrome"
-    "raycast"
+    "gpg-suite"
+    "openvpn-connect"
+    "spotify"
+    "macs-fan-control"
+    "github"
+    "steam"
+    "cloudflare-warp"
+    "teamviewer"
+    "adguard"
+    "shottr"
+    "tor-browser"
+
+    # only activate when using fresh machine, it will replace the system 
+    # "obsidian"
+    # "burp-suite"
+    # "firefox"
+    # "thunderbird"
+    # "google-drive"
+    # "jetbrains-toolbox"
+  ];
+
+  # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
+  # installed in `../home/default.nix` whenever possible.
+  homebrew.brews = [
+    "jenv"
+    #"zsh"
+    #"zsh-syntax-highlighting"
   ];
 
 }

@@ -59,7 +59,7 @@
       ################################## 
       # Platform specific
       ################################## 
-      asciinema # screen record
+      #asciinema # screen record
       # glab # gitlab cli
       # nodePackages.svg-term-cli
       # nodePackages."@napi-rs/cli"
@@ -104,6 +104,14 @@
       python3
       pkg-config
       mob
+      postman
+      vscode
+      meld
+      powershell
+      vagrant
+      #adoptopenjdk-bin
+      #adoptopenjdk-openj9-bin-8
+      #adoptopenjdk-openj9-bin-16
       # openvpn # currently not used
 
       ################################## 
@@ -117,6 +125,26 @@
       # spotifyd # spotify daemon for TUI
       # spotify-tui # spotify terminal UI
       obs-studio
+      asciinema
+      aria
+      ffmpeg
+      gifsicle
+      packer
+      wireshark
+      audacity
+
+      ################################## 
+      # Sec
+      ##################################
+      ffuf
+      jadx
+      sqlmap
+      gdb
+      exiftool
+      scrcpy
+      apktool
+      nuclei
+      nmap
 
       ################################## 
       # Communication
@@ -135,19 +163,25 @@
       nix-prefetch-git
       # nodePackages.node2nix # use with comma 
       # yarn2nix
-      dvt
+      #dvt
     ] ++ lib.optionals
       stdenv.isDarwin
       [
         mas
-        xbar
+        #xbar
         rectangle
         cocoapods
         m-cli # useful macOS CLI commands
         xcode-install
-        telegram
-        iriun-webcam
+        #iriun-webcam
         clipy
+        #openvpn-connect
+        #adguard
+        #github-desktop
+        #macs-fan-control
+        obsidian
+        #spotify
+        #steam
         # googlechrome
       ];
 }
