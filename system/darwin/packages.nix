@@ -12,8 +12,8 @@
     iterm2
     dnscrypt-proxy2
     terminal-notifier
-    darwin.cf-private
-    darwin.apple_sdk.frameworks.CoreServices
+    #darwin.cf-private
+    #darwin.apple_sdk.frameworks.CoreServices
     libiconv
     stdenv
   ];
