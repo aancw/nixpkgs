@@ -179,7 +179,7 @@
         #adguard
         #github-desktop
         #macs-fan-control
-        obsidian
+        #obsidian
         #spotify
         #steam
         # googlechrome

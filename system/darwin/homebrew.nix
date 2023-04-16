@@ -63,12 +63,15 @@ in
     "tor-browser"
 
     # only activate when using fresh machine, it will replace the system 
-    # "obsidian"
-    # "burp-suite"
-    # "firefox"
-    # "thunderbird"
-    # "google-drive"
-    # "jetbrains-toolbox"
+     "obsidian"
+     "burp-suite"
+     "firefox"
+     "thunderbird"
+     "google-drive"
+     "jetbrains-toolbox"
+     "google-chrome"
+     "brave-browser"
+     "megasync"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be

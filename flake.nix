@@ -75,7 +75,7 @@
         fullName = "Aan";
         email = "me@petruknisme.com";
         nixConfigDirectory = "/Users/${username}/.config/nixpkgs";
-        within.neovim.enable = true;
+        #within.neovim.enable = true;
       };
 
       # Modules shared by most `nix-darwin` personal configurations.
@@ -302,7 +302,7 @@
         ptr-shell = import ./home/shells.nix;
         ptr-git = import ./home/git.nix;
         ptr-tmux = import ./home/tmux.nix;
-        ptr-neovim = import ./home/neovim.nix;
+        #ptr-neovim = import ./home/neovim.nix;
         ptr-alacritty = import ./home/alacritty.nix;
         # this module disabled, because shell environment
         # defined is evaluated first & it takes more spaces
