@@ -49,7 +49,6 @@
     , flake-utils
     , pre-commit-hooks
     , neorg-overlay
-    , dvt
     , ...
     } @inputs:
 
@@ -245,9 +244,9 @@
             );
           };
 
-        dvt = _final: prev: {
-          dvt = inputs.dvt.packages.${prev.stdenv.system}.dvt;
-        };
+        #dvt = _final: prev: {
+          #dvt = inputs.dvt.packages.${prev.stdenv.system}.dvt;
+        #};
       };
 
       # }}}
