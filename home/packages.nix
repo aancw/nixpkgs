@@ -142,7 +142,7 @@
       #gdb
       exiftool
       scrcpy
-      apktool
+      #apktool
       nuclei
       nmap
 
