@@ -17,16 +17,12 @@
       substituters = [
         "https://cache.komunix.org"
         "https://nix-community.cachix.org"
-        # using cachix from r17
-        "https://r17.cachix.org/"
         "https://petruknisme.cachix.org/"
       ];
 
 
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        # using cachix from r17
-        "r17.cachix.org-1:vz0nG6BCbdgTPn7SEiOwe/3QwvjH1sb/VV9WLcBtkAY="
         "petruknisme.cachix.org-1:hD6UdX6x1vC+F0Q073pTV24aX4Anx6rCSxe3VfHwVxo="
       ];
     };
