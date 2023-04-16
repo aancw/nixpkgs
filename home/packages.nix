@@ -139,7 +139,7 @@
       ffuf
       jadx
       sqlmap
-      gdb
+      #gdb
       exiftool
       scrcpy
       apktool

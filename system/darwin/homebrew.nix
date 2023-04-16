@@ -65,6 +65,7 @@ in
     "the-unarchiver"
     "virtualbox"
     "warp"
+    "gdb"
 
     # only activate when using fresh machine, it will replace the system 
      "obsidian"

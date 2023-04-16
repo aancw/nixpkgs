@@ -61,7 +61,7 @@
       defaultNixpkgs = {
         config = { allowUnfree = true; };
         overlays = attrValues self.overlays
-          ++ singleton (inputs.android-nixpkgs.overlays.default)
+          #++ singleton (inputs.android-nixpkgs.overlays.default)
           ++ singleton (inputs.rust-overlay.overlays.default)
           ++ singleton (inputs.neorg-overlay.overlays.default);
       };
