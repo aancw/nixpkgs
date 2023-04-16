@@ -25,10 +25,6 @@
     rust-overlay.url = "github:oxalica/rust-overlay";
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
-    # Android Development
-    #android-nixpkgs.url = "github:tadfisher/android-nixpkgs";
-    #android-nixpkgs.inputs.nixpkgs.follows = "nixpkgs-unstable";
-
     # utilities
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
 
@@ -37,9 +33,6 @@
     neorg-overlay.inputs.nixpkgs.follows = "nixpkgs-unstable";
     neorg-overlay.inputs.flake-utils.follows = "flake-utils";
 
-    # dvt
-    #dvt.url = "github:efishery/dvt";
-    #dvt.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
   outputs =
@@ -61,7 +54,6 @@
       defaultNixpkgs = {
         config = { allowUnfree = true; };
         overlays = attrValues self.overlays
-          #++ singleton (inputs.android-nixpkgs.overlays.default)
           ++ singleton (inputs.rust-overlay.overlays.default)
           ++ singleton (inputs.neorg-overlay.overlays.default);
       };
