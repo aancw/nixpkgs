@@ -19,7 +19,7 @@ let
       nclean = "nix-collect-garbage && nix-collect-garbage -d";
       drb = "darwin-rebuild build --flake ${nixConfigDirectory}";
       drs = "darwin-rebuild switch --flake ${nixConfigDirectory}";
-      psc0 = "nix build ${nixConfigDirectory}#darwinConfigurations.Chernobyl.system --json | jq -r '.[].outputs | to_entries[].value' ";
+      psc0 = "nix build ${nixConfigDirectory}#darwinConfigurations.M1.system --json | jq -r '.[].outputs | to_entries[].value' ";
       #psc1 = "nix build ${nixConfigDirectory}#darwinConfigurations.eR17.system --json | jq -r '.[].outputs | to_entries[].value' | cachix push r17";
 
       # lenv show list generations aka list build version
