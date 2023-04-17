@@ -37,13 +37,12 @@ in
   ];
 
   homebrew.masApps = {
-    Vimari = 1480933944;
     WhatsApp = 1147396723;
     "Tailscale" = 1475387142;
     "Microsoft Remote Desktop" = 1295203466;
     Telegram = 747648890;
     "Foxit PDF Reader" = 1032155965;
-    "Enpass - Password Manager" = 732710998;
+    #"Enpass - Password Manager" = 732710998;
     Teams = 1543576480;
     NextDNS = 1464122853;
     "Hidden Bar" =  1452453066;
@@ -63,13 +62,10 @@ in
     "tor-browser"
     "keka"
     "the-unarchiver"
-    "virtualbox"
     "warp"
-    "gdb"
 
     # only activate when using fresh machine, it will replace the system 
      "obsidian"
-     "burp-suite"
      "firefox"
      "thunderbird"
      "google-drive"
