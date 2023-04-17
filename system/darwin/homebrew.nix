@@ -63,6 +63,7 @@ in
     "keka"
     "the-unarchiver"
     "warp"
+    "battery"
 
     # only activate when using fresh machine, it will replace the system 
      "obsidian"
