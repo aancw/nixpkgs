@@ -12,6 +12,7 @@
 
       trusted-users = [
         "@admin"
+        "petruknisme"
       ];
 
       substituters = [
