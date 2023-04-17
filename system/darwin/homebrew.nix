@@ -64,6 +64,7 @@ in
     "the-unarchiver"
     "warp"
     "battery"
+    "raycast"
 
     # only activate when using fresh machine, it will replace the system 
      "obsidian"
