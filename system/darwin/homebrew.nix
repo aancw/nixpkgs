@@ -65,6 +65,9 @@ in
     "warp"
     "battery"
     "raycast"
+    "openinterminal"
+    "font-meslo-lg-nerd-font"
+    "gittyup"
 
     # only activate when using fresh machine, it will replace the system 
      "obsidian"

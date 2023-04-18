@@ -255,7 +255,7 @@
 
         bootstrap-arm = bootstrap-x86.override { system = "aarch64-darwin"; };
 
-        M1 = bootstrap-arm.override {
+        Chernobyl = bootstrap-arm.override {
           modules = nixDarwinCommonModules ++ [
             {
               users.primaryUser = primaryUserInfo;
