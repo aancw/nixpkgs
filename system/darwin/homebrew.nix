@@ -63,7 +63,7 @@ in
     "keka"
     "the-unarchiver"
     "warp"
-    "battery"
+    #"battery"
     "raycast"
     "openinterminal"
     "font-meslo-lg-nerd-font"
