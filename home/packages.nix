@@ -94,7 +94,7 @@
       qemu
       babelfish
       paperkey
-      gcc
+      #gcc
       # yarn # currently defined in devShell.nix
       tokei
       # google-cloud-sdk

@@ -34,14 +34,14 @@ let
   # you can combine one or many devShell on environment, example:
   # use nix-env go node14
   devShells = with pkgs; {
-    rust-wasm = mkShell {
+    /* rust-wasm = mkShell {
       buildInputs = [
         (rust-bin.stable.latest.minimal.override {
           extensions = [ "rustc" ];
           targets = [ "wasm32-wasi" ];
         })
       ];
-    };
+    }; */
 
     go = mkShell
       { packages = [ go ]; };

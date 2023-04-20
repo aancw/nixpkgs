@@ -13,14 +13,14 @@ rec {
 
   # Rust 🦀 development environments ------------------- {{{
   # `nix develop my#rust`
-  rust = mkShell {
+  /* rust = mkShell {
     buildInputs = [
       (rust-bin.stable.latest.minimal.override {
         extensions = [ "rustc" ];
       })
     ];
   };
-
+ */
   # `nix develop my#rust-wasm`  
   rust-wasm = mkShell {
     buildInputs = [
