@@ -36,7 +36,7 @@
 
               if [ ! -e '/Applications/Nix Apps' ] \
                 || ourLink '/Applications/Nix Apps'; then
-                ln -sfn ${cfg.build.applications}/Applications '/Applications/Nix Apps'
+                ln -sfn ${apps}/Applications '/Applications/Nix Apps'
               else
                 echo "warning: /Applications/Nix Apps is not owned by nix-darwin, skipping App linking..." >&2
               fi
