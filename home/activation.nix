@@ -18,14 +18,27 @@
               };
             in
             ''
-              echo "setting up ${config.home.homeDirectory}/Applications/Home\ Manager\ Applications...">&2
+              # Set up applications.
+              echo "setting up /Applications/Nix Apps..." >&2
 
-              if [ ! -e ~/Applications -o -L ~/Applications ]; then
-                ln -sfn ${apps}/Applications ~/Applications
-              elif [ ! -e ~/Applications/Home\ Manager\ Apps -o -L ~/Applications/Home\ Manager\ Apps ]; then
-                ln -sfn ${apps}/Applications ~/Applications/Home\ Manager\ Apps
+              ourLink () {
+                local link
+                link=$(readlink "$1")
+                [ -L "$1" ] && [ "''${link#*-}" = 'system-applications/Applications' ]
+              }
+
+              # Clean up for links created at the old location in HOME
+              if ourLink ~/Applications; then
+                rm ~/Applications
+              elif ourLink ~/Applications/'Nix Apps'; then
+                rm ~/Applications/'Nix Apps'
+              fi
+
+              if [ ! -e '/Applications/Nix Apps' ] \
+                || ourLink '/Applications/Nix Apps'; then
+                ln -sfn ${cfg.build.applications}/Applications '/Applications/Nix Apps'
               else
-                echo "warning: ~/Applications and ~/Applications/Home Manager Apps are directories, skipping App linking..." >&2
+                echo "warning: /Applications/Nix Apps is not owned by nix-darwin, skipping App linking..." >&2
               fi
             ''
           )
