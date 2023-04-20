@@ -19,8 +19,7 @@
     # home-manager inputs
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    home-manager.inputs.utils.follows = "flake-utils";
-
+    
     # rust-overlay
     rust-overlay.url = "github:oxalica/rust-overlay";
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs-unstable";
