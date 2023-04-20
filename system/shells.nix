@@ -24,7 +24,7 @@
     fish.shellInit = ''
       for p in (string split : ${config.environment.systemPath})
         if not contains $p $fish_user_paths
-          set -g fish_user_paths $fish_user_paths $p
+          set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths $p
         end
       end
     '';
