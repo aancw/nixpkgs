@@ -115,6 +115,7 @@ in
     # jump like `z` or `fasd` 
     zoxide.enable = true;
     dircolors.enable = true;
+    go.enable = true;
     # Fish Shell (Default shell)
     # https://rycee.gitlab.io/home-manager/options.html#opt-programs.fish.enable
     fish = {
