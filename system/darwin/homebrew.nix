@@ -34,6 +34,7 @@ in
     "homebrew/core"
     "homebrew/services"
     "nrlquaker/createzap"
+    "jesseduffield/lazygit"
   ];
 
   homebrew.masApps = {
@@ -68,7 +69,6 @@ in
     "openinterminal"
     "font-meslo-lg-nerd-font"
     "gittyup"
-
     # only activate when using fresh machine, it will replace the system 
      "obsidian"
      "firefox"
@@ -84,6 +84,7 @@ in
   # installed in `../home/default.nix` whenever possible.
   homebrew.brews = [
     "jenv"
+    "lazygit"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];

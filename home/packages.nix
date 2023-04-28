@@ -159,6 +159,7 @@
       comma # run without install
       # nodePackages.node2nix # use with comma 
       # rnix-lsp # use in neovim and install with nvim-lsp-install
+      neovim
       home-manager
       nix-prefetch-git
       # nodePackages.node2nix # use with comma 
