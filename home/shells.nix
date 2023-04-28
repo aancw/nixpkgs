@@ -159,6 +159,13 @@ in
         rpkgjson = ''
           ${pkgs.nodejs}/bin/node -e "console.log(Object.entries(require('./package.json').$argv[1]).map(([k,v]) => k.concat(\"@\").concat(v)).join(\"\n\") )"
         '';
+
+        fixgpg = ''
+          killall gpg-agent && 
+          gpg-agent --daemon &&
+          git config --global gpg.program "$(which gpg)" && 
+          git config --global user.signingkey $argv[1]
+        '';
       };
 
       interactiveShellInit = ''
