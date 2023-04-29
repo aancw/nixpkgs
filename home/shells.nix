@@ -166,6 +166,11 @@ in
           git config --global gpg.program "$(which gpg)" && 
           git config --global user.signingkey $argv[1]
         '';
+
+        # Get PEM Cert from website using openssl
+        get-cert = ''
+          openssl s_client -showcerts -connect $argv[1] </dev/null | sed -n -e "/-.BEGIN/,/-.END/ p" > $argv[2]
+        '';
       };
 
       interactiveShellInit = ''
