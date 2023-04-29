@@ -108,7 +108,7 @@
       vscode
       meld
       powershell
-      vagrant
+      #vagrant
       #adoptopenjdk-bin
       #adoptopenjdk-openj9-bin-8
       #adoptopenjdk-openj9-bin-16
