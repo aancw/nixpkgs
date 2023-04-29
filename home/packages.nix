@@ -90,7 +90,7 @@
       # podman
       # podman-compose
       colima
-      docker
+      #docker
       qemu
       babelfish
       paperkey
