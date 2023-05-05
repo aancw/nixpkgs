@@ -130,7 +130,7 @@
       ffmpeg
       gifsicle
       packer
-      wireshark
+      #wireshark
       audacity
 
       ################################## 

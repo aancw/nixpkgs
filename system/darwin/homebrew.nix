@@ -78,6 +78,7 @@ in
      "google-chrome"
      "brave-browser"
      "megasync"
+     "wireshark"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
