@@ -79,6 +79,7 @@ in
      "brave-browser"
      "megasync"
      "wireshark"
+     "burp-suite"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
