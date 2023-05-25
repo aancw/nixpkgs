@@ -82,7 +82,7 @@
       ripgrep # another yet of grep
       ffmpeg
       imagemagick
-      himalaya # CLI based email client
+      #himalaya # CLI based email client
 
       ################################## 
       # Development
@@ -107,7 +107,7 @@
       postman
       vscode
       meld
-      powershell
+      #powershell
       #vagrant
       #adoptopenjdk-bin
       #adoptopenjdk-openj9-bin-8

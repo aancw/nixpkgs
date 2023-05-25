@@ -20,6 +20,7 @@ in
   homebrew.enable = true;
   homebrew.global.autoUpdate = true;
   homebrew.onActivation.cleanup = "zap";
+  homebrew.onActivation.upgrade = true;
   homebrew.global.brewfile = true;
    #homebrew.caskArgs = {
      # force = true;
@@ -79,7 +80,7 @@ in
      "brave-browser"
      "megasync"
      "wireshark"
-     "burp-suite"
+     #"burp-suite"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
