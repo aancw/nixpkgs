@@ -16,7 +16,7 @@
     #darwin.apple_sdk.frameworks.CoreServices
     libiconv
     stdenv
-    nodejs
+    nodejs 
   ];
 
   # something wrong

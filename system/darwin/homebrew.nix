@@ -81,6 +81,8 @@ in
      "megasync"
      "wireshark"
      #"burp-suite"
+     "orbstack"
+     #"radare2"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
@@ -89,6 +91,7 @@ in
     "nuclei"
     "jenv"
     "lazygit"
+    "radare2"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];

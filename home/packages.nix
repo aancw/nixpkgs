@@ -101,7 +101,11 @@
       # nodejs-16_x
       # gitlab-runner
       comby
-      python3
+      (python3.withPackages(ps: with ps; [
+        pandas 
+        requests 
+        r2pipe
+      ]))
       pkg-config
       mob
       postman
