@@ -96,7 +96,7 @@
       paperkey
       #gcc
       # yarn # currently defined in devShell.nix
-      tokei
+      #tokei
       # google-cloud-sdk
       # nodejs-16_x
       # gitlab-runner
@@ -154,7 +154,7 @@
       # Communication
       ################################## 
       discord
-      slack
+      #slack
       zoom-us
       ################################## 
       # Useful Nix related tools
