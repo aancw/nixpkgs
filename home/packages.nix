@@ -100,14 +100,14 @@
       # google-cloud-sdk
       # nodejs-16_x
       # gitlab-runner
-      comby
+      #comby
       (python3.withPackages(ps: with ps; [
         pandas 
         requests 
         r2pipe
       ]))
       pkg-config
-      mob
+      #mob
       postman
       vscode
       meld
