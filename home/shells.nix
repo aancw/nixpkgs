@@ -75,7 +75,7 @@ let
       gls = "gl --show-signature";
       gfa = "git fetch --all";
       grc = "git rebase --continue";
-      lg = "lazygit";
+      gti = "gitui";
       rm = "rm -i";
 
       # Development

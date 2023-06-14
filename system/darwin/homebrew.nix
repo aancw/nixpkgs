@@ -35,7 +35,6 @@ in
     "homebrew/core"
     "homebrew/services"
     "nrlquaker/createzap"
-    "jesseduffield/lazygit"
   ];
 
   homebrew.masApps = {
@@ -90,7 +89,6 @@ in
   homebrew.brews = [
     "nuclei"
     "jenv"
-    "lazygit"
     "radare2"
     #"zsh"
     #"zsh-syntax-highlighting"
