@@ -83,7 +83,7 @@
       ffmpeg
       imagemagick
       #himalaya # CLI based email client
-      gitui
+      #gitui
 
       ################################## 
       # Development
