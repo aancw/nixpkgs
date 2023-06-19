@@ -22,6 +22,11 @@
     # Needed to address bug where $PATH is not properly set for fish:
     # https://github.com/LnL7/nix-darwin/issues/122
     fish.shellInit = ''
+      if test (arch) = "arm64"
+          eval /opt/homebrew/bin/brew shellenv
+      else
+          eval /usr/local/bin/brew shellenv
+      end
       for p in (string split : ${config.environment.systemPath})
         if not contains $p $fish_user_paths
           set -g fish_user_paths $HOME/.cargo/bin $HOME/go/bin $fish_user_paths $p

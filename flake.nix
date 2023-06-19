@@ -28,9 +28,9 @@
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
 
     # neovim
-    neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
-    neorg-overlay.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    neorg-overlay.inputs.flake-utils.follows = "flake-utils";
+     neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
+     neorg-overlay.inputs.nixpkgs.follows = "nixpkgs-unstable";
+     neorg-overlay.inputs.flake-utils.follows = "flake-utils";
 
   };
 
@@ -173,67 +173,67 @@
         };
 
         # Overlay that adds some additional Neovim plugins
-        vimPlugins = final: prev:
-          let
-            inherit (self.overlays.pkgs-unstable final prev) pkgs-unstable;
-            inherit (pkgs-unstable) fetchFromGitHub;
-            inherit (self.overlays.vimUtils final prev) vimUtils;
-          in
-          {
-            vimPlugins = prev.vimPlugins.extend (_: _:
-              # Useful for testing/using Vim plugins that aren't in `nixpkgs`.
-              vimUtils.buildVimPluginsFromFlakeInputs inputs [
-                # Add flake input names here for a Vim plugin repos
-              ] // {
-                # Other Vim plugins
-                # how to put packages here?
-                # 1. add in schema inputs `inputs.repo_flake.url`
-                # 2. add package name from inputs.repo_flake.packages.${prev.stdenv.system} package_name;
-                # 3. done
-                # e.g., `inherit (inputs.cornelis.packages.${prev.stdenv.system}) cornelis-vim;`
+        # vimPlugins = final: prev:
+        #   let
+        #     inherit (self.overlays.pkgs-unstable final prev) pkgs-unstable;
+        #     inherit (pkgs-unstable) fetchFromGitHub;
+        #     inherit (self.overlays.vimUtils final prev) vimUtils;
+        #   in
+        #   {
+        #     vimPlugins = prev.vimPlugins.extend (_: _:
+        #       # Useful for testing/using Vim plugins that aren't in `nixpkgs`.
+        #       vimUtils.buildVimPluginsFromFlakeInputs inputs [
+        #         # Add flake input names here for a Vim plugin repos
+        #       ] // {
+        #         # Other Vim plugins
+        #         # how to put packages here?
+        #         # 1. add in schema inputs `inputs.repo_flake.url`
+        #         # 2. add package name from inputs.repo_flake.packages.${prev.stdenv.system} package_name;
+        #         # 3. done
+        #         # e.g., `inherit (inputs.cornelis.packages.${prev.stdenv.system}) cornelis-vim;`
 
-                # vimPlugins - overlays --------------------------------------------------------{{{
+        #         # vimPlugins - overlays --------------------------------------------------------{{{
 
-                lazy-nvim = vimUtils.buildVimPluginFrom2Nix {
-                  pname = "lazy.nvim";
-                  version = "2023-01-15";
-                  src = fetchFromGitHub {
-                    owner = "folke";
-                    repo = "lazy.nvim";
-                    rev = "984008f7ae17c1a8009d9e2f6dc007e13b90a744";
-                    sha256 = "19hqm6k9qr5ghi6v6brxr410bwyi01mqnhcq071h8bibdi4f66cg";
-                  };
-                  meta.homepage = "https://github.com/folke/lazy.nvim";
-                };
+        #         lazy-nvim = vimUtils.buildVimPluginFrom2Nix {
+        #           pname = "lazy.nvim";
+        #           version = "2023-01-15";
+        #           src = fetchFromGitHub {
+        #             owner = "folke";
+        #             repo = "lazy.nvim";
+        #             rev = "984008f7ae17c1a8009d9e2f6dc007e13b90a744";
+        #             sha256 = "19hqm6k9qr5ghi6v6brxr410bwyi01mqnhcq071h8bibdi4f66cg";
+        #           };
+        #           meta.homepage = "https://github.com/folke/lazy.nvim";
+        #         };
 
-                git-conflict-nvim = vimUtils.buildVimPluginFrom2Nix {
-                  pname = "git-conflict.nvim";
-                  version = "2022-12-31";
-                  src = fetchFromGitHub {
-                    owner = "akinsho";
-                    repo = "git-conflict.nvim";
-                    rev = "cbefa7075b67903ca27f6eefdc9c1bf0c4881017";
-                    sha256 = "1pli57rl2sglmz2ibbnjf5dxrv5a0nxk8kqqkq1b0drc30fk9aqi";
-                  };
-                  meta.homepage = "https://github.com/akinsho/git-conflict.nvim";
-                };
+        #         git-conflict-nvim = vimUtils.buildVimPluginFrom2Nix {
+        #           pname = "git-conflict.nvim";
+        #           version = "2022-12-31";
+        #           src = fetchFromGitHub {
+        #             owner = "akinsho";
+        #             repo = "git-conflict.nvim";
+        #             rev = "cbefa7075b67903ca27f6eefdc9c1bf0c4881017";
+        #             sha256 = "1pli57rl2sglmz2ibbnjf5dxrv5a0nxk8kqqkq1b0drc30fk9aqi";
+        #           };
+        #           meta.homepage = "https://github.com/akinsho/git-conflict.nvim";
+        #         };
 
-                codeium-vim = vimUtils.buildVimPluginFrom2Nix {
-                  pname = "codeium-vim";
-                  version = "2023-02-08";
-                  src = fetchFromGitHub {
-                    owner = "Exafunction";
-                    repo = "codeium.vim";
-                    rev = "78382694eb15e1818ec6ff9ccd0389f63661b56f";
-                    sha256 = "1b4lf0s8x3qqvpmyzz0a7j3ynvlzx8sx621dqbf8l3vl7nfkc4gy";
-                  };
-                  meta.homepage = "https://github.com/Exafunction/codeium.vim";
-                };
+        #         codeium-vim = vimUtils.buildVimPluginFrom2Nix {
+        #           pname = "codeium-vim";
+        #           version = "2023-02-08";
+        #           src = fetchFromGitHub {
+        #             owner = "Exafunction";
+        #             repo = "codeium.vim";
+        #             rev = "78382694eb15e1818ec6ff9ccd0389f63661b56f";
+        #             sha256 = "1b4lf0s8x3qqvpmyzz0a7j3ynvlzx8sx621dqbf8l3vl7nfkc4gy";
+        #           };
+        #           meta.homepage = "https://github.com/Exafunction/codeium.vim";
+        #         };
 
-                # }}}
-              }
-            );
-          };
+        #         # }}}
+        #       }
+        #     );
+        #   };
 
         #dvt = _final: prev: {
           #dvt = inputs.dvt.packages.${prev.stdenv.system}.dvt;
