@@ -78,6 +78,8 @@ let
       #gti = "gitui";
       #lg = "lazygit";
       rm = "rm -i";
+      run-ovpn = "sudo /Library/Frameworks/OpenVPNConnect.framework/Versions/Current/usr/sbin/ovpnagent";
+      tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
 
       # Development
       # docker = "${pkgs.podman}/bin/podman";
