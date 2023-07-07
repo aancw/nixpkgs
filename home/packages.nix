@@ -106,6 +106,8 @@
         pandas 
         requests 
         r2pipe
+        pip
+        virtualenv
       ]))
       pkg-config
       #mob
@@ -148,6 +150,7 @@
       exiftool
       scrcpy
       #apktool
+      android-tools
       #nuclei
       nmap
 
