@@ -81,6 +81,7 @@ in
      "wireshark"
      #"burp-suite"
      "orbstack"
+     "eul"
      #"radare2"
   ];
 
