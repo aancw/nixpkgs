@@ -80,8 +80,6 @@ in
      #"burp-suite"
      "orbstack"
      "eul"
-     "pandoc"
-     "bundletool"
      #"radare2"
   ];
 
@@ -91,6 +89,8 @@ in
     "nuclei"
     "jenv"
     "radare2"
+    "pandoc"
+    "bundletool"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];
