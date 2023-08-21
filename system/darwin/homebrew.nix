@@ -81,6 +81,7 @@ in
      "orbstack"
      "eul"
      "pandoc"
+     "bundletool"
      #"radare2"
   ];
 
