@@ -33,6 +33,7 @@ in
     "homebrew/cask-versions"
     "homebrew/services"
     "nrlquaker/createzap"
+    "igorcferreira/tap"
   ];
 
   homebrew.masApps = {
@@ -80,6 +81,7 @@ in
      #"burp-suite"
      "orbstack"
      "eul"
+     "install-aab"
      #"radare2"
   ];
 
