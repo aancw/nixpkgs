@@ -81,7 +81,7 @@ in
      #"burp-suite"
      "orbstack"
      "eul"
-     "install-aab"
+     #"install-aab"
      #"radare2"
   ];
 
@@ -93,6 +93,7 @@ in
     "radare2"
     "pandoc"
     "bundletool"
+    "install-aab"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];
