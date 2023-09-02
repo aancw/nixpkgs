@@ -90,7 +90,7 @@
       ################################## 
       # podman
       # podman-compose
-      colima
+      #colima
       #docker
       qemu
       babelfish
