@@ -84,6 +84,7 @@ in
      #"install-aab"
      #"radare2"
      "ghidra"
+     "temurin"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
