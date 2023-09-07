@@ -108,6 +108,7 @@
         r2pipe
         pip
         virtualenv
+        frida-tools
       ]))
       pkg-config
       #mob

@@ -84,7 +84,8 @@ in
      #"install-aab"
      #"radare2"
      "ghidra"
-     "temurin"
+     #"temurin"
+     "temurin17"
   ];
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
@@ -96,6 +97,7 @@ in
     "pandoc"
     "bundletool"
     "install-aab"
+    "gnirehtet"
     #"zsh"
     #"zsh-syntax-highlighting"
   ];
